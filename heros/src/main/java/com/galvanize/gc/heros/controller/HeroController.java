@@ -1,6 +1,5 @@
 package com.galvanize.gc.heros.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.galvanize.gc.heros.model.Hero;
 import com.galvanize.gc.heros.service.HeroService;
 import org.springframework.http.HttpStatus;
@@ -18,7 +17,7 @@ public class HeroController {
     }
 
     @GetMapping("/api/heroes")
-    public List<Hero> getAllHeroes() throws JsonProcessingException {
+    public List<Hero> getAllHeroes()  {
         return heroService.getAllHeroes();
     }
 
