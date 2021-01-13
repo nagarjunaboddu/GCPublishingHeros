@@ -1,6 +1,5 @@
 [
   {
-
     "name":"Bruce Wayne ",
     "heroName":"Batman",
     "height":178,
@@ -16,7 +15,6 @@
     "story" : "After witnessing the murder of his parents Dr. Thomas Wayne and Martha Wayne as a child, he swore vengeance against criminals, an oath tempered by a sense of justice."
   },
   {
-
     "name":"Diana Prince",
     "heroName":"Wonder Woman",
     "height":183,
@@ -32,7 +30,6 @@
     "story" : "Wonder Woman was sculpted from clay by her mother Queen Hippolyta and was given a life to live as an Amazon, along with superhuman powers as gifts by the Greek gods."
   },
   {
-
     "name": "Selina Kyle",
     "heroName": "Catwoman",
     "height": 175,
@@ -46,10 +43,8 @@
     "imageUrl": "https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/165-catwoman.jpg",
     "description": "Infamous cat-burglar",
     "story": "As deadly as she is beautiful, infamous cat-burglar Selina Kyle uses her nine lives to walk the razor's edge between light and darkness in Gotham City."
-
   },
   {
-
     "name": "Peter Parker",
     "heroName": "Spiderman",
     "height": 178,
