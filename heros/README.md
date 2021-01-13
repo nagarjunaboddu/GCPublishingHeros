@@ -78,11 +78,18 @@ Request Method : GET
 Response Body : 
 
 {
-"hero_name":"Flash",
-"special_power":"Can flash",
-"height":"176",
-"weight":"189",
-"real_name":"Jay Garrick"
-"image_url": "https://rb.gy/r8g78a"
+"name":"Bruce Wayne ",
+"heroName":"Batman",
+"height":178,
+"weight": 77,
+"specialPower": "Genius intellect",
+"intelligence": 81,
+"strength": 40,
+"power" : 63,
+"speed": 29,
+"agility": 50,
+"imageUrl":"https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/69-batman.jpg",
+"description": "The Dark Knight",
+"story" : "After witnessing the murder of his parents Dr. Thomas Wayne and Martha Wayne as a child, he swore vengeance against criminals, an oath tempered by a sense of justice."
 }
 ----------------------------------------------------------------------------

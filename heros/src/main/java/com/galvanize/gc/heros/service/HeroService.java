@@ -19,4 +19,8 @@ public class HeroService {
     public List<Hero> createHeros(List<Hero> heroes) {
         return repository.saveAll(heroes);
     }
+
+    public Hero getHeroByHeroName(String heroName) {
+       return repository.findByHeroName(heroName);
+    }
 }
