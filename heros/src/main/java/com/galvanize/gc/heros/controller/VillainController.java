@@ -6,9 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.persistence.GeneratedValue;
 import java.util.List;
-
 
 
 @RestController
@@ -21,12 +19,12 @@ public class VillainController {
     }
 
     @GetMapping("/api/villains")
-    public List<Villain> getAllVillains(){
+    public List<Villain> getAllVillains() {
         return villainRepository.findAll();
     }
 
     @GetMapping("/api/villains/{heroName}")
-    public Villain getVillainByHeroName(@PathVariable String heroName){
+    public Villain getVillainByHeroName(@PathVariable String heroName) {
         return villainRepository.findByHeroName(heroName);
     }
 

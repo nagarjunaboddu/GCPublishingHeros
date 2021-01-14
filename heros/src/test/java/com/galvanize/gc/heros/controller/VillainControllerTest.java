@@ -1,7 +1,5 @@
 package com.galvanize.gc.heros.controller;
 
-
-import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -23,7 +21,7 @@ public class VillainControllerTest {
     private MockMvc mockMvc;
 
     @Test
-    public void getVillains_returnsAllVillains() throws Exception{
+    public void getVillains_returnsAllVillains() throws Exception {
         mockMvc.perform(get("/api/villains"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
