@@ -23,11 +23,20 @@ public class VillainControllerTest {
     private MockMvc mockMvc;
 
     @Test
-
     public void getVillains_returnsAllVillains() throws Exception{
         mockMvc.perform(get("/api/villains"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.length()").value(3));
+    }
+
+    @Test
+    public void getVillainByHeroName_returnsVillain() throws Exception {
+        mockMvc.perform(get("/api/villains/Electro"))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
+                .andExpect(jsonPath("$.archRival").value("Spiderman"))
+                .andExpect(jsonPath("$.name").value("Maxwell Dillon"));
+
     }
 }
