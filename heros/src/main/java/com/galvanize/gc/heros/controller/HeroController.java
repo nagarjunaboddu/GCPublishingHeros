@@ -2,10 +2,12 @@ package com.galvanize.gc.heros.controller;
 
 import com.galvanize.gc.heros.model.Hero;
 import com.galvanize.gc.heros.service.HeroService;
+import javassist.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class HeroController {
@@ -28,8 +30,13 @@ public class HeroController {
     }
 
     @GetMapping("/api/heroes/{heroName}")
-    public Hero getHeroByHeroName(@PathVariable String heroName) {
-        return heroService.getHeroByHeroName(heroName);
+    public Hero getHeroByHeroName(@PathVariable String heroName) throws NotFoundException {
+
+        Optional<Hero> herooptional = heroService.getHeroByHeroName(heroName);
+        if(herooptional.isPresent()){
+            return herooptional.get();
+        }
+        throw new NotFoundException("Requested hero is not available");
     }
 
 }

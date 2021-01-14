@@ -71,6 +71,13 @@ public class HeroControllerTest {
                 .andExpect(jsonPath("$.agility").value(50));
     }
 
+    @Test
+    public void getHeroByName_returnsHero_FailCase() throws Exception {
+        mockMvc.perform(get("/api/heroes/Arjuna"))
+                .andExpect(status().isNotFound())
+                .andDo(print());
+    }
+
 }
 
 

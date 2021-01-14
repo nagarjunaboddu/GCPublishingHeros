@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class HeroService {
@@ -20,7 +21,7 @@ public class HeroService {
         return repository.saveAll(heroes);
     }
 
-    public Hero getHeroByHeroName(String heroName) {
+    public Optional<Hero> getHeroByHeroName(String heroName) {
        return repository.findByHeroName(heroName);
     }
 }
