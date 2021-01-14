@@ -2,14 +2,14 @@ package com.galvanize.gc.heros.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Hero {
+public class Villain {
     @Id
     @GeneratedValue()
     private int id;
+    private String archRival;
     private String name;
     private String heroName;
     private int height;
@@ -22,15 +22,10 @@ public class Hero {
     private int agility;
     private String description;
     private String story;
-
-
-
     private String imageUrl;
 
-    public Hero() {
-    }
-
-    public Hero(String name, String heroName, int height, int weight, String specialPower, int intelligence, int strength, int power, int speed, int agility, String description, String story, String imageUrl) {
+    public Villain(String archRival, String name, String heroName, int height, int weight, String specialPower, int intelligence, int strength, int power, int speed, int agility, String description, String story, String imageUrl) {
+        this.archRival = archRival;
         this.name = name;
         this.heroName = heroName;
         this.height = height;
@@ -46,12 +41,23 @@ public class Hero {
         this.imageUrl = imageUrl;
     }
 
+    public Villain() {
+    }
+
     public int getId() {
         return id;
     }
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getArchRival() {
+        return archRival;
+    }
+
+    public void setArchRival(String archRival) {
+        this.archRival = archRival;
     }
 
     public String getName() {
@@ -160,8 +166,9 @@ public class Hero {
 
     @Override
     public String toString() {
-        return "Hero{" +
+        return "Villain{" +
                 "id=" + id +
+                ", archRival='" + archRival + '\'' +
                 ", name='" + name + '\'' +
                 ", heroName='" + heroName + '\'' +
                 ", height=" + height +
