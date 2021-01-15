@@ -9,6 +9,7 @@ Request Method : GET
 Response Body:
     [
     {
+    "id": "1",
     "name":"Bruce Wayne ",
     "heroName":"Batman",
     "height":178,
@@ -21,9 +22,10 @@ Response Body:
     "agility": 50,
     "imageUrl":"https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/69-batman.jpg",
     "description": "The Dark Knight",
-    "story" : "After witnessing the murder of his parents Dr. Thomas Wayne and Martha Wayne as a child, he swore vengeance against criminals, an oath tempered by a sense of justice."
+    "story" : "After witnessing the murder of his parents Dr. Thomas Wayne and Martha Wayne as a child, he swore vengeance against criminals, an oath tempered by a sense of justice.",
     },
     {
+    "id": "2",
     "name":"Diana Prince",
     "heroName":"Wonder Woman",
     "height":183,
@@ -39,6 +41,7 @@ Response Body:
     "story" : "Wonder Woman was sculpted from clay by her mother Queen Hippolyta and was given a life to live as an Amazon, along with superhuman powers as gifts by the Greek gods."
     },
     {
+    "id": "3",
     "name": "Selina Kyle",
     "heroName": "Catwoman",
     "height": 175,
@@ -54,6 +57,7 @@ Response Body:
     "story": "As deadly as she is beautiful, infamous cat-burglar Selina Kyle uses her nine lives to walk the razor's edge between light and darkness in Gotham City."
     },
     {
+    "id": "4",
     "name": "Peter Parker",
     "heroName": "Spiderman",
     "height": 178,
@@ -93,3 +97,75 @@ Response Body :
 "story" : "After witnessing the murder of his parents Dr. Thomas Wayne and Martha Wayne as a child, he swore vengeance against criminals, an oath tempered by a sense of justice."
 }
 ----------------------------------------------------------------------------
+
+GET Heros :
+
+Acceptance criteria : URI - /api/villains
+
+Response status : 200 OK
+Request Method : GET
+Response Body:
+    [
+    {
+    "id":1,
+    "name":"Maxwell Dillon ",
+    "heroName":"Electro",
+    "archRival": "Spiderman"
+    "height":178,
+    "weight": 77,
+    "specialPower": "Genius intellect",
+    "intelligence": 81,
+    "strength": 40,
+    "power" : 63,
+    "speed": 29,
+    "agility": 50,
+    "imageUrl":"https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/69-batman.jpg",
+    "description": "Electro's description",
+    "story" : "Electro's story"
+    },
+    {
+    "id":2,
+    "name":"Otto Octavius",
+    "heroName":"Doctor Octopus",
+    "archRival": "Spiderman"
+    "height":178,
+    "weight": 77,
+    "specialPower": "Genius intellect",
+    "intelligence": 81,
+    "strength": 40,
+    "power" : 63,
+    "speed": 29,
+    "agility": 50,
+    "imageUrl":"https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/69-batman.jpg",
+    "description": "Electro's description",
+    "story" : "Electro's story"
+    }
+    ]
+
+
+Get requested hero details using URI - /api/villains/{name}
+Successful Response status : 200 ok
+Error Response status: 404 NOT FOUND
+
+Request Method : GET 
+
+Response Body :
+    {
+    "id":1,
+    "name":"Maxwell Dillon ",
+    "heroName":"Electro",
+    "archRival": "Spiderman"
+    "height":178,
+    "weight": 77,
+    "specialPower": "Genius intellect",
+    "intelligence": 81,
+    "strength": 40,
+    "power" : 63,
+    "speed": 29,
+    "agility": 50,
+    "imageUrl":"https://cdn.jsdelivr.net/gh/akabab/superhero-api@0.3.0/api/images/md/69-batman.jpg",
+    "description": "Electro's description",
+    "story" : "Electro's story"
+    }
+
+
